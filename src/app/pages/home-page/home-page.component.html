@@ -1,0 +1,25 @@
+<section class="home-page">
+  <section
+    *ngIf="user$ | async as user; else signup"
+    class="greet-user-container flex"
+  >
+    <greet-user [user]="user$ | async" [bitcoin]="bitcoin"></greet-user>
+    <div class="transactions">
+      <moves-list [moves]="moves$ | async | slice: 0:3"></moves-list>
+    </div>
+    <!-- <div></div> -->
+  </section>
+
+  <ng-template #signup>
+    <section>
+      <h1>
+        Securing your Bitcoin transactions <br />
+        in a single easy to use wallet.
+      </h1>
+      <div class="signup flex column">
+        <p>Sign up and get your first Bitcoins for free!</p>
+        <a class="signup-btn" routerLink="signup">Sign up</a>
+      </div>
+    </section>
+  </ng-template>
+</section>

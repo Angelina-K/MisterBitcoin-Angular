@@ -1,0 +1,20 @@
+<section class="signup flex column">
+  <h1>Don't have an account yet?</h1>
+  <form (ngSubmit)="onSignup()" #form="ngForm" class="flex column">
+    <p>
+      Sign up now to get your first ₿ 100 coins <br />
+      for free!
+    </p>
+    <input
+      [(ngModel)]="userName"
+      type="text"
+      name="userName"
+      required
+      minlength="1"
+      #username="ngModel"
+      placeholder="Enter your name"
+    />
+    <button [disabled]="form.invalid" class="signup-btn">Signup</button>
+    <p *ngIf="username.invalid && username.touched">Invalid name.</p>
+  </form>
+</section>

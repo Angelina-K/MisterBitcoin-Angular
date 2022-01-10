@@ -1,0 +1,24 @@
+<section
+  [routerLink]="['contact', contact._id]"
+  class="contact-preview flex column pointer"
+>
+  <div class="flex">
+    <img
+      class="contact-img"
+      src="https://i.pravatar.cc/100?{{ contact._id }}"
+      alt=""
+    />
+    <div class="flex column">
+      <p>{{ contact.name }}</p>
+      <p>{{ contact.phone }}</p>
+    </div>
+  </div>
+  <section (click)="$event.stopPropagation()" class="actions">
+    <a (click)="onEditContact()" title="Edit"
+      ><img src="../../../assets/images/edit.png" alt=""
+    /></a>
+    <button (click)="onRemove.emit(contact._id)" title="Delete">
+      <img src="../../../assets/images/delete.png" alt="" />
+    </button>
+  </section>
+</section>

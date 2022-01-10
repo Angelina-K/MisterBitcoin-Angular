@@ -1,0 +1,9 @@
+<section *ngIf="moves.length" class="moves-container">
+  <h2>Last transactions</h2>
+  <div *ngFor="let move of moves">
+    <p>
+      {{ move.amount }} coins to {{ move.to }}. <br />
+      {{ move.at | date }}
+    </p>
+  </div>
+</section>

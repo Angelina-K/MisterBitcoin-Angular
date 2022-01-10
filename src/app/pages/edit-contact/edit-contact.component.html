@@ -1,0 +1,17 @@
+<section class="edit-contact contact-page-outlet">
+  <div class="actions">
+    <a class="close-btn" (click)="onCloseSection()" title="Close">X</a>
+  </div>
+  <form *ngIf="contact" (ngSubmit)="onSaveContact()" class="flex column">
+    <label for="name">Name</label>
+    <input [(ngModel)]="contact.name" type="text" name="name" id="name" />
+
+    <label for="phone">Phone</label>
+    <input [(ngModel)]="contact.phone" type="text" name="phone" id="phone" />
+
+    <label for="email">Email</label>
+    <input [(ngModel)]="contact.email" type="text" name="email" id="email" />
+
+    <button class="btn">Save</button>
+  </form>
+</section>

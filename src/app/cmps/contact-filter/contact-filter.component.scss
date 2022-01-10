@@ -1,0 +1,16 @@
+@import "../../../assets/styles/setup/variables";
+.contact-filter {
+  background-color: $clr4;
+  padding-inline-start: 5px;
+  border-radius: 3px;
+  // gap: 5px;
+  img {
+    width: 25px;
+  }
+  input {
+    width: 150px;
+  }
+  input:focus {
+    outline: none;
+  }
+}

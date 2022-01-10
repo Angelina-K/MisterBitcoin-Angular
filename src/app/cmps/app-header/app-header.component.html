@@ -1,0 +1,39 @@
+<!-- <div class="main-screen" (click)="toggleMenu()"></div> -->
+<header class="main-header flex space-between">
+  <h2 routerLink="" class="logo pointer">Mr.<span>₿</span>itcoin</h2>
+  <button class="menu-btn" (click)="openMenu()">
+    <img src="../../../assets/images/menu.png" alt="" />
+  </button>
+  <nav class="main-nav" [class]="showMobileMenu ? 'mobile-nav' : 'hide'">
+    <button (click)="closeMenu()">X</button>
+    <div>
+      <a
+        routerLink=""
+        routerLinkActive="active"
+        [routerLinkActiveOptions]="{ exact: true }"
+        (click)="closeMenu()"
+        >Home</a
+      >
+    </div>
+    <div>
+      <a routerLink="contact" routerLinkActive="active" (click)="closeMenu()"
+        >Contacts</a
+      >
+    </div>
+    <div>
+      <a routerLink="statistics" routerLinkActive="active" (click)="closeMenu()"
+        >Statistics</a
+      >
+    </div>
+    <div>
+      <a *ngIf="user$ | async as user; else signup" (click)="onLogOut()"
+        >Log out</a
+      >
+      <ng-template #signup>
+        <a routerLink="signup" routerLinkActive="active" (click)="closeMenu()"
+          >Signup</a
+        >
+      </ng-template>
+    </div>
+  </nav>
+</header>

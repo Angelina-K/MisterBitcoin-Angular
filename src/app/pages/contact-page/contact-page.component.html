@@ -1,0 +1,21 @@
+<section class="contact-page">
+  <div class="action-bar flex">
+    <contact-filter
+      (onSetFilter)="onSetFilter($event)"
+      [filterBy]="filterBy"
+    ></contact-filter>
+    <a class="add-btn" routerLink="edit" title="Add contact"
+      ><img src="../../../assets/images/add.png" alt=""
+    /></a>
+  </div>
+  <h2>Contacts</h2>
+  <main class="contact-page-content flex">
+    <contact-list
+      (onRemove)="onRemoveContact($event)"
+      [contacts]="contacts$ | async"
+    ></contact-list>
+    <div class="contact-outlet">
+      <router-outlet></router-outlet>
+    </div>
+  </main>
+</section>

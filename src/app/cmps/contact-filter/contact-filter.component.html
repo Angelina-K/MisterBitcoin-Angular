@@ -1,0 +1,11 @@
+<section class="contact-filter flex align-center">
+  <img src="../../../assets/images/search.png" alt="" />
+  <input
+    *ngIf="filterBy"
+    [(ngModel)]="_filterBy.term"
+    (ngModelChange)="onSetFilter.emit(_filterBy)"
+    name="term"
+    type="text"
+    placeholder="Search contact"
+  />
+</section>

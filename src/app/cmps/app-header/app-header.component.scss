@@ -1,0 +1,91 @@
+@import "../../../assets/styles/setup/variables";
+
+header.main-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+
+  & .logo {
+    span {
+      color: $clr1;
+      margin: 2px;
+    }
+  }
+  .menu-btn {
+    width: 40px;
+  }
+}
+
+.hide {
+  display: none;
+}
+.mobile-nav {
+  display: flex;
+  padding: 20px;
+  position: fixed;
+  flex-direction: column;
+  align-items: center;
+  background-color: $clr3;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100vh;
+  z-index: 1;
+  > *:not(:last-child, :only-of-type) {
+    border-bottom: 1px solid $clr2;
+  }
+  div {
+    text-align: center;
+    width: 70%;
+    padding: 20px;
+  }
+  button {
+    align-self: flex-end;
+  }
+}
+
+.active {
+  font-weight: bold;
+}
+@media (max-width: 860px) {
+}
+@media (min-width: 860px) {
+  button {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 860px) {
+  header.main-header {
+    margin-top: 40px;
+    border-top: 0.1px solid $clr4;
+    border-bottom: 0.1px solid $clr4;
+    & nav {
+      display: flex;
+      div {
+        &:hover {
+          background-color: $clr6;
+          + div a {
+            border-inline-start: 1px solid transparent;
+          }
+        }
+        padding: 20px 0px;
+        a {
+          padding: 5px 35px;
+        }
+      }
+      div:not(:first-of-type) {
+        a {
+          border-inline-start: 1px solid $clr4;
+        }
+      }
+    }
+    & .logo {
+      span {
+        font-size: 35px;
+        margin: 2px;
+      }
+    }
+  }
+}

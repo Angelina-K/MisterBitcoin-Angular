@@ -1,0 +1,6 @@
+<section class="greet-user">
+  <h1>Hello {{ user.name }}!</h1>
+  <h4>Current balance</h4>
+  <h3>BTC : ₿{{ user.coins }}</h3>
+  <h3>{{ (1 / bitcoin) * user.coins | currency }}</h3>
+</section>

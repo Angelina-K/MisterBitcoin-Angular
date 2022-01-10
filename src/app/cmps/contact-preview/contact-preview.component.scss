@@ -1,0 +1,40 @@
+@import "../../../assets/styles/setup/_variables.scss";
+.contact-preview {
+  padding: 10px 20px 0px 20px;
+  margin-bottom: 20px;
+  border-radius: 3px;
+  align-items: center;
+  p {
+    width: 150px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  img {
+    // border-radius: 50%;
+    // width: 60px;
+    // margin-inline-end: 10px;
+  }
+  .actions {
+    padding-left: auto;
+    padding-right: auto;
+    display: grid;
+    grid-template-columns: repeat(2, 40px);
+    margin-top: 5px;
+    visibility: hidden;
+    height: 30px;
+
+    img {
+      width: 20px;
+      &:hover {
+        width: 25px;
+      }
+    }
+  }
+  &:hover {
+    background-color: $clr6;
+    .actions {
+      visibility: visible;
+    }
+  }
+}

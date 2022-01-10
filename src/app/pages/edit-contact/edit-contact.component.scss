@@ -1,0 +1,26 @@
+@import "../../../assets/styles/setup/variables";
+.edit-contact {
+  // .actions {
+  //   text-align: end;
+  //   margin-bottom: 10px;
+  //   a {
+  //     padding: 10px 15px;
+  //     text-align: center;
+  //     border-radius: 50%;
+  //     background-color: $clr7;
+  //     transition: background-color 0.1s;
+  //     &:hover {
+  //       background-color: $clr4;
+  //       outline: 1px solid $clr1;
+  //     }
+  //   }
+  // }
+  form {
+    gap: 10px;
+    // align-items: center;
+    button {
+      margin-top: 10px;
+      align-self: center;
+    }
+  }
+}

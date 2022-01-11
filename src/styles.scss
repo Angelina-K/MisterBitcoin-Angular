@@ -39,9 +39,7 @@ h6 {
 }
 
 h1 {
-  // font-size: 24px;
   line-height: 1.5em;
-  // margin-top: 100px;
   font-size: 2.5rem;
   font-weight: lighter;
   margin-bottom: 20px;
@@ -52,7 +50,6 @@ h2 {
 }
 
 button {
-  // cursor: pointer;
   border: none;
 }
 
@@ -84,10 +81,6 @@ button {
   padding: 10px;
   outline: 1px solid $clr1;
   border-radius: 3px;
-  &:hover {
-    outline: 1.5px solid $clr1;
-    background-color: $clr4;
-  }
 }
 
 input {
@@ -108,36 +101,23 @@ input {
   width: max-content;
   padding: 10px 15px;
   border-radius: 5px;
-  &:hover {
-    background-color: transparent;
-    outline: 2px solid $clr1;
-  }
 }
+
 .contact-page-outlet {
   background-color: $clr3;
   padding: 20px 20px;
   height: max-content;
   height: 100vh;
   bottom: 0;
-  // max-height: max-content;
-  // padding-left: auto;
-  // padding-right: auto;
   border-radius: 3px;
-  // width: 100%;
   width: 98vw;
   .actions {
-    text-align: end;
-    margin-bottom: 10px;
     .close-btn {
       padding: 10px 15px;
       text-align: center;
       border-radius: 50%;
       background-color: $clr7;
       transition: background-color 0.1s;
-      &:hover {
-        background-color: $clr4;
-        outline: 1px solid $clr1;
-      }
     }
   }
 }
@@ -154,21 +134,27 @@ input {
     width: 400px;
     height: max-content;
     padding: 20px 40px;
-    border-radius: 3px;
     .actions {
       text-align: end;
       margin-bottom: 10px;
       .close-btn {
-        padding: 10px 15px;
-        text-align: center;
-        border-radius: 50%;
-        background-color: $clr7;
-        transition: background-color 0.1s;
         &:hover {
           background-color: $clr4;
           outline: 1px solid $clr1;
         }
       }
+    }
+  }
+  .btn {
+    &:hover {
+      outline: 1.5px solid $clr1;
+      background-color: $clr4;
+    }
+  }
+  .signup-btn {
+    &:hover {
+      outline: 2px solid $clr1;
+      background-color: transparent;
     }
   }
 }

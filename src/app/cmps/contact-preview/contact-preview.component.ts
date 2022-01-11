@@ -12,11 +12,15 @@ export class ContactPreviewComponent implements OnInit {
   @Output() onRemove = new EventEmitter<string>();
   constructor(private router: Router) {}
 
-  showActions: boolean = false;
+  showActionBtns: boolean = false;
 
   onEditContact() {
     this.router.navigateByUrl(`contact/edit/${this.contact._id}`);
     window.scroll(0, 0);
+  }
+  toggleActions(ev) {
+    ev.stopPropagation();
+    this.showActionBtns = !this.showActionBtns;
   }
 
   ngOnInit(): void {}

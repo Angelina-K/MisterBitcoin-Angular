@@ -13,12 +13,26 @@
       <p>{{ contact.phone }}</p>
     </div>
   </div>
-  <section (click)="$event.stopPropagation()" class="actions">
+  <section
+    (click)="$event.stopPropagation()"
+    class="actions"
+    [class]="showActionBtns ? 'show' : 'hide'"
+  >
     <a (click)="onEditContact()" title="Edit"
-      ><img src="../../../assets/images/edit.png" alt=""
+      ><img src="assets/images/edit.png" alt=""
     /></a>
     <button (click)="onRemove.emit(contact._id)" title="Delete">
-      <img src="../../../assets/images/delete.png" alt="" />
+      <img src="assets/images/delete.png" alt="" />
     </button>
+    <button (click)="toggleActions($event)">X</button>
   </section>
+
+  <button
+    *ngIf="!showActionBtns"
+    (click)="toggleActions($event)"
+    class="more-btn"
+    title="More actions"
+  >
+    <img src="assets/images/more.png" alt="" />
+  </button>
 </section>

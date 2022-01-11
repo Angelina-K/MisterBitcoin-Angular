@@ -1,19 +1,20 @@
 @import "../../../assets/styles/setup/variables";
 .moves-container {
-  // overflow: scroll;
   h2 {
     padding: 10px 20px;
   }
   p {
     border-radius: 3px;
     padding: 10px 20px;
-    &:hover {
-      background-color: $clr4;
-    }
   }
 }
 
 @media screen and (min-width: 860px) {
   .moves-container {
+    p {
+      &:hover {
+        background-color: $clr4;
+      }
+    }
   }
 }

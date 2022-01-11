@@ -50,8 +50,6 @@ export class ContactDetailsComponent implements OnInit, OnDestroy {
   }
 
   ngOnDestroy(): void {
-    console.log('on destroy');
-
     this.subscription.unsubscribe();
   }
 

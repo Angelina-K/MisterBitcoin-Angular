@@ -2,27 +2,18 @@
   <div class="actions flex align-center space-between">
     <div class="edit-del">
       <a (click)="onEditContact()" title="Edit"
-        ><img src="../../../assets/images/edit.png" alt=""
+        ><img src="assets/images/edit.png" alt=""
       /></a>
       <button (click)="onRemoveContact()" title="Delete">
-        <img src="../../../assets/images/delete.png" alt="" />
+        <img src="assets/images/delete.png" alt="" />
       </button>
     </div>
     <a class="close-btn" (click)="onCloseSection()">X</a>
   </div>
 
-  <!-- <img
-    class="contact-img"
-    src="https://i.pravatar.cc/100?{{ contact._id }}"
-    alt=""
-  /> -->
   <h2>{{ contact.name }}</h2>
-  <p>
-    <img src="../../../assets/images/phone.png" alt="" />{{ contact.phone }}
-  </p>
-  <p>
-    <img src="../../../assets/images/email.png" alt="" />{{ contact.email }}
-  </p>
+  <p><img src="assets/images/phone.png" alt="" />{{ contact.phone }}</p>
+  <p><img src="assets/images/email.png" alt="" />{{ contact.email }}</p>
 
   <transfer-fund
     [contact]="contact"

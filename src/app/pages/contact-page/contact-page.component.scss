@@ -1,7 +1,6 @@
 @import "../../../assets/styles/setup/variables";
 .contact-page {
   margin-top: 40px;
-  // flex-direction: column;
   h2 {
     text-align: center;
     margin-bottom: 20px;
@@ -23,10 +22,6 @@
       border-radius: 50%;
       text-align: center;
       background-color: $clr1;
-      &:hover {
-        background-color: transparent;
-        outline: 2px solid $clr1;
-      }
     }
   }
   .contact-page-content {
@@ -61,6 +56,14 @@
         // justify-content:
         width: max-content;
         // background-color: $clr6;
+      }
+    }
+    .action-bar {
+      .add-btn {
+        &:hover {
+          background-color: transparent;
+          outline: 2px solid $clr1;
+        }
       }
     }
   }

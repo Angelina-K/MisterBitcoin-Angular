@@ -1,7 +1,4 @@
 .contact-details {
-  // width: 100%;
-  // top: 0;
-  // height: 100vh;
   .actions div {
     text-align: start;
   }
@@ -16,17 +13,11 @@
     height: 30px;
     img {
       width: 20px;
-      &:hover {
-        width: 25px;
-      }
     }
   }
   h2 {
     margin-bottom: 20px;
   }
-  // .contact-img {
-  //   width: 80px;
-  // }
   p {
     margin-bottom: 10px;
     display: flex;
@@ -39,4 +30,11 @@
 }
 
 @media screen and (min-width: 860px) {
+  .edit-del {
+    img {
+      &:hover {
+        width: 25px;
+      }
+    }
+  }
 }

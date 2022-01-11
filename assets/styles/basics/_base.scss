@@ -59,9 +59,6 @@ button {
   padding: 10px;
   outline: 0.5px solid $clr1;
   border-radius: 3px;
-  &:hover {
-    outline: 1px solid $clr1;
-  }
 }
 
 input {
@@ -75,16 +72,6 @@ input {
   &::placeholder {
     color: #fff;
   }
-}
-
-.bg-image {
-  background-image: url(../../images/bg.jpg);
-  // opacity: 0.5;
-  height: 100vh;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
 }
 
 @media screen and (min-width: 960px) {

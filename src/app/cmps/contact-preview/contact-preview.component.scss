@@ -1,10 +1,10 @@
 @import "../../../assets/styles/setup/_variables.scss";
 .contact-preview {
-  padding: 10px 20px 0px 20px;
+  padding: 10px 20px;
   margin-bottom: 10px;
   border-radius: 3px;
   align-items: center;
-  height: 130px;
+  // height: 100px;
   border: 1px solid $clr6;
   p {
     width: 150px;
@@ -19,24 +19,27 @@
     grid-template-columns: repeat(2, 40px);
     margin-top: 5px;
     height: 30px;
+    display: none;
     img {
       width: 20px;
     }
-    & button:last-of-type {
-      grid-column: 1/-1;
-    }
+    // & button:last-of-type {
+    //   grid-column: 1/-1;
+    // }
   }
 }
 
 @media screen and (min-width: 860px) {
   .contact-preview {
     border: none;
+    padding: 10px 20px 0px 20px;
+    height: 110px;
     .actions {
       visibility: hidden;
-      & button:last-of-type {
-        display: none;
-        // background-color: aqua;
-      }
+      // & button:last-of-type {
+      //   display: none;
+      //   // background-color: aqua;
+      // }
     }
     &:hover {
       background-color: $clr6;
